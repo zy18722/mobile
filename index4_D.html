@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multi-modal Reading Environment</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        
+    </head>
+    <body>
+
+        <div class="navbar navbar-default" role="navigation" id = "navbar">
+            <div class="container-fluid">       
+                <div class="collapse navbar-collapse" id="mynavbar-content">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><button id = "setting" type="button" class="btn btn-default">        
+                                <span class="glyphicon glyphicon-cog"></span>
+                            </button></li>             
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                       
+                        <li><button id = "fullscreen" type="button" class="btn btn-default">        
+                                <span class="glyphicon glyphicon-resize-full"></span>
+                            </button></li>                                  
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <aside class = "box" id = "control">
+        <div class = "container" id = "settings">   
+            <span>Playback Rate</span>
+            <br><br>
+            
+            <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0.5" data-slider-max="2" data-slider-step="0.1" data-slider-value="1"/>
+
+            <br><br>
+
+            <span>Font Size</span>
+            <br><br>
+            <input id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="15" data-slider-max="30" data-slider-step="1" data-slider-value="20"/>
+    </aside>
+
+        
+      <section>
+
+        
+        
+        <div id = "audio">
+        <audio id="audiofile" src="audio4.mp3" controls></audio>
+        </div>
+        
+
+        
+
+        <div id = "sub">
+        <div id="text"></div>
+        </div>
+
+      </section>
+
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap-slider.js"></script>
+        <script src="js/screenfull.js"></script>
+        <script src="js/index4.js"></script>
+        
+    
+    </body>
+</html>
