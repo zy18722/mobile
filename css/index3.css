@@ -81,7 +81,7 @@ section {
     
     box-shadow: 0 1px 4px rgba(0,0,0,0.8);   
     
-    height: 250px;
+    min-height: 300px;
     margin:0 auto;
     text-align:justify;
     text-justify:inter-word;
