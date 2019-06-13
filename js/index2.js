@@ -26,7 +26,7 @@
     }
   });
 
-  var audioPlayer = doc.getElementById("audiofile2");
+  var audioPlayer = doc.getElementById("audiofile");
 
   $('#ex1').bootstrapSlider({
   tooltip: 'show'
