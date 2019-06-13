@@ -46,7 +46,7 @@ section {
 
         width: 100%;
         height: 100%;            
-        height: 1100px;
+        
         
 }
 
@@ -63,8 +63,7 @@ section {
    
     border-radius: 5px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.8);   
-    width: 700px;  
-    min-height: 1000px;
+    
     margin:0 auto;
     text-align:justify;
     text-justify:inter-word;
