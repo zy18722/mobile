@@ -46,45 +46,26 @@ section {
 
         width: 100%;
         height: 100%;            
-        height: 1200px;
         
         
 
 }
 
 #audio { 
-    padding-top: 150px; 
-    padding-bottom: 50px;   
-    width: 700px; 
-    margin: 0 auto;
+    padding-top: 40px; 
+    padding-bottom: 20px;   
+    
        
 }
 
 
 #audiofile {
-   width: 700px; 
+   width: 100%; 
     
 }
 
 
 
-#play-pause {
-     width: 700px;  
-     
-      margin:0 auto;
-    text-align:center;
-     padding-top: 100px;
-    padding-bottom: 80px;
-}
-
-#audio-play, #audio-pause {
-    
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-
-
-}
 
 
 #text {   
@@ -95,10 +76,9 @@ section {
 }
 
 #sub {    
-    border-radius: 5px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.8);   
-    width: 700px;  
-    height: 250px;
+    
+    box-shadow: 0 1px 4px rgba(0,0,0,0.8);    
+    min-height: 300px;
     margin:0 auto;
     text-align:justify;
     text-justify:inter-word;
