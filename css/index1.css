@@ -2,45 +2,6 @@ body {
   font-family: 'Times New Roman', 'Droid Sans Mono', sans-serif;
 }
 
-#navbar {
-    margin-bottom: 0;
-    height: 52px;
-}
-
-#setting, #focustrue, #fullscreen{
-    width: 46px;
-    height: 30px;
-    text-align:center;
-    margin-right: 5px;
-
-}
-
-#mynavbar-content {
-    padding-top: 10px;
-    padding-right: 25px;
-
-}
-
-.box {
-            float: left;
-            position: relative;           
-            left: 0;
-            min-height: 1100px;
-            width: 240px;
-            margin-left: -240px;
-            margin-top: 0;
-            overflow: auto;  
-            background: #d4d4d4;
-            -moz-transition: margin-left 1s;
-            transition: margin-left 1s;
-            visibility: hidden;
-
-}
-
-#settings {
-    padding-top: 20px;
-    padding-left: 20px;
-}
 
 section {
 
@@ -61,9 +22,7 @@ section {
 
 #content {    
    
-    
     box-shadow: 0 1px 4px rgba(0,0,0,0.8);   
-    
     margin:0 auto;
     text-align:justify;
     text-justify:inter-word;
