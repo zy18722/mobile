@@ -1,30 +1,6 @@
 (function(win, doc) {
 
-  // enter or exit the full screen mode
-  $("#fullscreen").click(function(){
-      
-      if (screenfull.isFullscreen) {
-        screenfull.exit();
-      }
-      else{
-        if (screenfull.enabled) {
-        screenfull.request();
-        } 
-      }
-      
-  });
-
-  var box = doc.getElementById("control");
-
-  $("#setting").click(function(){
-
-    box.style.visibility="visible";
-    if (box.offsetLeft == 0) {  
-      box.style['margin-left'] = -240 + "px";
-    } else {
-      box.style['margin-left'] = 0 + "px";
-    }
-  });
+  
 
   $("#audio").hide();
   $("#audio-pause").hide();
@@ -47,29 +23,6 @@
   // set the audio file to be muted
   audioPlayer.muted = true;
 
-  $('#ex1').bootstrapSlider({
-  tooltip: 'show'
-  });
-
-  // change the playback rate
-  var rateChange = function() {
-    audioPlayer.playbackRate = ex1.bootstrapSlider('getValue');
-  };
-
-  var ex1 = $("#ex1").bootstrapSlider().on('change',rateChange);
-
-
-  $('#ex2').bootstrapSlider({
-  tooltip: 'show'
-  });
-
-  // change the font size
-  var fontChange = function() {
-    var fontvalue = ex2.bootstrapSlider('getValue');
-    $("#text").css("fontSize", fontvalue);
-  };
-
-  var ex2 = $("#ex2").bootstrapSlider().on('change',fontChange);
 
   var subtitles = doc.getElementById("text");
 
