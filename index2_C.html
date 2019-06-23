@@ -6,39 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Multi-modal Reading Environment</title>
         <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
-        
-        <link href="css/audio.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/index2.css">
         
     </head>
     <body>
-<div class="audio-wrapper">
-        <audio>
-            <source src="audio2.mp3" type="audio/mp3">
-        </audio>
-        <div class="audio-left">
-            <img id="audioPlayer" src="./image/play.png">
-        </div>
-        <div class="audio-right">
-            <p style="max-width: 536px;">audio.mp3</p>
-            <div class="progress-bar-bg" id="progressBarBg">
-                <span id="progressDot"></span>
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-            <div class="audio-time">
-                <span class="audio-length-current" id="audioCurTime">00:00</span>
-                <span class="audio-length-total">01:57</span>
-            </div>
-        </div>
-    </div>
-        
-    
-        
-     
 
+        
+    <div id = "audio"> 
+
+        <audio preload="auto">
+    <source src="audio2.mp3">
+</audio>
+    </div>
+       
+
+     
 
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/audio.js"></script>
+        <script src="./audiojs/audio.js"></script>
+        <script>
+      audiojs.events.ready(function() {
+        audiojs.createAll();
+      });
+    </script>
 
         
     
