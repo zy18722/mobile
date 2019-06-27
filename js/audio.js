@@ -20,7 +20,7 @@
 			.ppq-audio-player .play-pause-btn{float:left;margin:29px 0 0 12px}\
 			.ppq-audio-player .play-pause-btn .play-pause-icon{position:relative;display:block;width:47px;height:47px;border:2px solid #00a293;border-radius:100%;background-color:#fff}\
 			.ppq-audio-player .play-pause-btn .play-pause-icon:after{display:block;content:"";background-position:0 0;width:17px;height:18px}\
-			.ppq-audio-player.player-playing .play-pause-icon:after{background-position:-25px 0;width:12px;height:17px}\
+			.ppq-audio-player.player-playing .play-pause-icon:after{background-position:-25px 0;width:10px;height:18px}\
 			.ppq-audio-player .player-time{float:left;width:51px;margin-right:8px;text-align:right}\
 			.ppq-audio-player .player-time-duration{float:right;margin:0 0 0 8px;text-align:left}\
 			.ppq-audio-player .player-bar{position:relative;overflow:hidden;height:5px;margin-top:53px;background-color:#fff}\
