@@ -18,7 +18,7 @@
 			.ppq-audio-player{line-height:111px;position:relative;overflow:hidden;height:111px;margin:0 auto;background:#f4f4f4}\
 			.ppq-audio-player audio{position:absolute;vertical-align:baseline}\
 			.ppq-audio-player .play-pause-btn{float:left;margin:29px 0 0 12px}\
-			.ppq-audio-player .play-pause-btn .play-pause-icon{position:relative;display:block;width:47px;height:47px;border:2px solid #00a293;border-radius:100%;background-color:#fff}\
+			.ppq-audio-player .play-pause-btn .play-pause-icon{position:relative;display:block;width:47px;height:47px;border:3px solid #00a293;border-radius:100%;background-color:#fff}\
 			.ppq-audio-player .play-pause-btn .play-pause-icon:after{display:block;content:"";background-position:0 0;width:17px;height:18px}\
 			.ppq-audio-player.player-playing .play-pause-icon:after{background-position:-25px 0;width:10px;height:18px}\
 			.ppq-audio-player .player-time{float:left;width:51px;margin-right:8px;text-align:right}\
