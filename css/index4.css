@@ -4,26 +4,29 @@ body {
 
 
 
-section {
 
-        width: 100%;
-        height: 100%;            
-        
-        
+#play-pause {
+    
+    text-align: center;
+     padding-top: 50px;
+    
+}
+
+#audio-play, #audio-pause { 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
 
 }
+
 
 #audio { 
     padding-top: 40px; 
-    padding-bottom: 20px;   
+    padding-bottom: 40px;
+   
     
        
-}
-
-
-#audiofile {
-   width: 100%; 
-    
 }
 
 
