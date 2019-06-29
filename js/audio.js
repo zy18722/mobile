@@ -8,8 +8,8 @@
 	// 播放器样式 - 替换到css更改样式即可
 	if (!$('#ppq-audio-player-style').length) {
 		var style = '<style id="ppq-audio-player-style" type="text/css">\
-			html{font-size:14px}\
-			body{margin:0;padding:0;border:0;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;}\
+			html{font-size:20px}\
+			body{margin:0;padding:0;border:0;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;}\
 			a, button, input, select, textarea{-webkit-tap-highlight-color:transparent}\
 			ol, ul {list-style:none;}\
 			.audio-hidden{width:0;height:0;visibility:hidden}\
