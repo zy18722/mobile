@@ -82,7 +82,8 @@
 				$duration = $player.find('.player-time-duration');
 
 			$current.html('00:00');
-			$duration.html('&hellip;');
+			//$duration.html('&hellip;');
+			$current.html(convertTimeStr(audioEle.duration));
 
 			initAudioEvents();
 			bindPageEvents();
