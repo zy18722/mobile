@@ -14,7 +14,7 @@
 			ol, ul {list-style:none;}\
 			.audio-hidden{width:0;height:0;visibility:hidden}\
 			.ppq-audio-player .play-pause-btn .play-pause-icon:after{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}\
-			.ppq-audio-player .play-pause-btn .play-pause-icon:after,.ppq-audio-player.player-playing .play-pause-icon:after{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAASCAMAAADrP+ckAAABNVBMVEUAAAAAmIcAmYgAm4sAnIsAnIwAnI0AnY0AnY4Ano4Ano8An5AAoJEAoZEAoZIAopMBn5ABoJABoJEBoZEBoZIBoZMBopMCoZICopMCopQCo5QDoJEDoZEDo5QDo5UFopMGo5QKpJYLpJYMpZcMppgNpZcNppgNp5gOppcOppgOp5gOp5kQqJoSp5kSqJoTqZsbrJ4drJ8irZ8mrqEnsKMrsqUtsqYytKg0tak5t6tHvLJJvbNLvbNqycBrysFsycFwy8Jwy8N3zsZ+0MiA0cqD0suH1M2L1c6P1tCk3tmm39mv4t285+PE6ebH6ufN7erS7+zV7+3W8O3X8O7a8u/k9fPs+Pft+Pfx+fjx+fnx+vny+vr1+/v2+/v5/fz7/f38/f38/v38/v79/v7+/v7+//////+ALAV1AAAAAXRSTlMAQObYZgAAATxJREFUKM+F0tlWwjAQBuAgQgHTRFFrqaK4IALiiuKugPsKrqUo0DbO+z+CDYHIFZ279nznP3P+DHLh4+L8HWybAQM+qDdlUgGXMRcqpIwYnIwoG7ct6LjAfgdUKlZoAmPQLMRSCBrLZH4idPAEbqcb11eamm1w1ciqGgJrFVPNiMydfkLH8X5LhXMWV1YOc7WCKSGGHty6A9Z2ZRbFGaEymApFKaHJceXoFRxnmPKcZoQXL79huPLijKng/ouP4nFJZcdXUWJML/gpLyo6du2zPTUmQ3uPw7cnWiK8dPUDzn+rUvVaFXUdv4Fjy+51nBcqj3XxQl71o9v33eqlipO0yZWZJnEE5pqqJZTZsy/xjHKvYqBk82+7FCgiaO1GZqKHz/2TkKpWrYv7qldryIGH9c2bFrR75yXV4PwBrZh1OjRqx9oAAAAASUVORK5CYII=);background-size:36px 18px}\
+			.ppq-audio-player .play-pause-btn .play-pause-icon:after,.ppq-audio-player.player-playing .play-pause-icon:after{background-size:36px 18px}\
 			.ppq-audio-player{line-height:111px;position:relative;overflow:hidden;height:111px;margin:0 auto;background:#f4f4f4}\
 			.ppq-audio-player audio{position:absolute;vertical-align:baseline}\
 			.ppq-audio-player .play-pause-btn{float:left;margin:29px 0 0 12px}\
@@ -36,6 +36,8 @@
 		eCancel = onMobile ? 'touchcancel' : 'mouseup',
 		hackPrefixes = ['webkit', 'moz', 'ms', 'o'],
 		hackHiddenProperty = getHackHidden();
+
+	$("#audio-pause").hide();
 
 	$.fn.initAudioPlayer = function() {
 		// 遍历处理audio
@@ -82,8 +84,7 @@
 				$duration = $player.find('.player-time-duration');
 
 			$current.html('00:00');
-			//$duration.html('&hellip;');
-			$current.html(convertTimeStr(audioEle.duration));
+			$duration.html('&hellip;');
 
 			initAudioEvents();
 			bindPageEvents();
@@ -113,7 +114,9 @@
 
 				// 监听ended，播放完恢复暂停状态
 				audioEle.addEventListener('ended', function() {
-					$player.removeClass('player-playing').addClass('player-paused');
+					//$player.removeClass('player-playing').addClass('player-paused');
+					$("#audio-pause").hide();
+          			$("#audio-play").show();
 				});
 			}
 
@@ -139,6 +142,19 @@
 					}
 					return false;
 				});
+
+$("#audio-play").click(function(){
+    audioEle.play();
+    $("#audio-play").hide();
+    $("#audio-pause").show();
+  });
+
+  $("#audio-pause").click(function(){
+    audioEle.pause();
+    $("#audio-pause").hide();
+    $("#audio-play").show();
+  });
+
 			}
 
 			function getCurrentTime(e) {
