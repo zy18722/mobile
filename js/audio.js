@@ -66,7 +66,7 @@
 			}
 
 			// 添加播放器盒子
-			var $player = $('<div class="ppq-audio-player">' + $('<div>').append($this.eq(0).clone()).html() + '<div class="play-pause-btn"><a href="javascript: void(0);" class="play-pause-icon"></a></div></div>'),
+			var $player = $('<div class="ppq-audio-player">' + $('<div>').append($this.eq(0).clone()).html()),
 				audioEle = $player.find('audio')[0];
 
 			$player.find('audio').addClass('audio-hidden');
@@ -132,16 +132,7 @@
 				});
 
 				// 监听播放暂停按钮click
-				$player.find('.play-pause-btn').on('click', function() {
-					if ($player.hasClass('player-playing')) {
-						$player.removeClass('player-playing').addClass('player-paused');
-						audioEle.pause();
-					} else {
-						$player.addClass('player-playing').removeClass('player-paused');
-						audioEle.play();
-					}
-					return false;
-				});
+				
 
 $("#audio-play").click(function(){
     audioEle.play();
@@ -161,21 +152,7 @@ $("#audio-play").click(function(){
 				var et = onMobile ? e.originalEvent.touches[0] : e;
 				return Math.round((audioEle.duration * (et.pageX - $bar.offset().left)) / $bar.width());
 			}
-
-			if (hackHiddenProperty) {
-			    var evtname = hackHiddenProperty.replace(/[H|h]idden/, '') + 'visibilitychange';
-			    document.addEventListener(evtname, function() {
-			        if (isHidden() || getHackVisibilityState() === 'hidden') {
-			        	$player.removeClass('player-playing').addClass('player-paused');
-			        	audioEle.pause();
-			        }
-			    }, false);
-			}
-
-			window.addEventListener('beforeunload', function() {
-			    $player.removeClass('player-playing').addClass('player-paused');
-			    audioEle.pause();
-			}, false);
+			
 		});
 		return this;
 	}
